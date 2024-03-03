@@ -29,18 +29,13 @@ def main():
     args, _ = parser.parse_known_args()
     
     # Read the data
-    train_df = pd.read_csv('s3://sagemaker-us-east-1-635439539142/akash/wine-prediction/train_data_wine_pred.csv')  # Path to your train data file
-    test_df = pd.read_csv('s3://sagemaker-us-east-1-635439539142/akash/wine-prediction/test_data_wine_pred.csv',nrows=50)   # Path to your test data file
+    train_df = pd.read_csv('s3://sagemaker-us-east-1-635439539142/akash/bank-prediction/train_data_bank_pred.csv')  # Path to your train data file
+    test_df = pd.read_csv('s3://sagemaker-us-east-1-635439539142/akash/bank-prediction/test_data_bank_pred.csv')   # Path to your test data file
     
-    # Convert target variable to numerical labels starting from 0
-    label_encoder = LabelEncoder()
-    train_df['target'] = label_encoder.fit_transform(train_df['target'])
-    test_df['target'] = label_encoder.transform(test_df['target'])
-    
-    X_train = train_df.drop("target", axis=1)
-    y_train = train_df["target"]
-    X_test = test_df.drop("target", axis=1)
-    y_test = test_df["target"] 
+    X_train = train_df.drop("y", axis=1)
+    y_train = train_df["y"]
+    X_test = test_df.drop("y", axis=1)
+    y_test = test_df["y"] 
     
     def data_type(dataset):
         """

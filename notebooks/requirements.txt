@@ -1,2 +1,7 @@
 pandas
-numpy
+xgboost
+scikit-learn
+fsspec
+category_encoders
+s3fs
+botocore==1.27.18
