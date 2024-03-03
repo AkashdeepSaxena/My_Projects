@@ -5,11 +5,16 @@ import pandas as pd
 import joblib
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.preprocessing import StandardScaler
 from category_encoders import CatBoostEncoder
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+import xgboost as xgb
+import ast
+from sklearn.neural_network import MLPClassifier
 
 def main():
     parser = argparse.ArgumentParser()
@@ -17,21 +22,26 @@ def main():
     parser.add_argument("--rfc_n_estimators", type=int, default=100)
     parser.add_argument("--rfc_min_samples_split", type=float, default=0.05)
     parser.add_argument("--rfc_criterion", type=str, default="gini")
-    parser.add_argument("--gb_n_estimators", type=int, default=100)
-    parser.add_argument("--gb_learning_rate", type=float, default=0.1)
-    parser.add_argument("--gb_max_depth", type=int, default=3)
-    parser.add_argument("--logistic_max_iter", type=int, default=1000)
+    parser.add_argument("--logistic_max_iter", type=int, default=500)
     parser.add_argument("--svm_kernel", type=str, default="rbf")
+    parser.add_argument("--xgb_max_depth", type=int, default=3)
+    parser.add_argument("--nn_hidden_layer_sizes", type=str, default="(100,)")
     args, _ = parser.parse_known_args()
     
-    train_df = pd.read_csv('s3://sagemaker-us-east-1-635439539142/akash/salary-prediction/train_data_salary_pred.csv',nrows=1000)  # Path to your train data file
-    test_df = pd.read_csv('s3://sagemaker-us-east-1-635439539142/akash/salary-prediction/test_data_salary_pred.csv',nrows=300)   # Path to your test data file
-
-    X_train = train_df.drop("salary", axis=1)
-    y_train = train_df["salary"]
-    X_test = test_df.drop("salary", axis=1)
-    y_test = test_df["salary"] 
-
+    # Read the data
+    train_df = pd.read_csv('s3://sagemaker-us-east-1-635439539142/akash/wine-prediction/train_data_wine_pred.csv')  # Path to your train data file
+    test_df = pd.read_csv('s3://sagemaker-us-east-1-635439539142/akash/wine-prediction/test_data_wine_pred.csv',nrows=50)   # Path to your test data file
+    
+    # Convert target variable to numerical labels starting from 0
+    label_encoder = LabelEncoder()
+    train_df['target'] = label_encoder.fit_transform(train_df['target'])
+    test_df['target'] = label_encoder.transform(test_df['target'])
+    
+    X_train = train_df.drop("target", axis=1)
+    y_train = train_df["target"]
+    X_test = test_df.drop("target", axis=1)
+    y_test = test_df["target"] 
+    
     def data_type(dataset):
         """
         Function to identify the numerical and categorical data columns
@@ -43,13 +53,12 @@ def main():
         for i in dataset.columns:
             if dataset[i].dtype == 'int64' or dataset[i].dtype == 'float64':
                 numerical.append(i)
-        else:
-            categorical.append(i)
+            else:
+                categorical.append(i)
         return numerical, categorical
 
-
     numerical, categorical = data_type(X_train)
-
+    
     # Identifying the binary columns and ignoring them from scaling
     def binary_columns(df):
         """
@@ -78,23 +87,21 @@ def main():
                                   min_samples_split=args.rfc_min_samples_split, 
                                   criterion=args.rfc_criterion)
     
-    gb = GradientBoostingClassifier(n_estimators=args.gb_n_estimators, 
-                                    learning_rate=args.gb_learning_rate, 
-                                    max_depth=args.gb_max_depth)
-    
     logistic = LogisticRegression(penalty='l2', max_iter=args.logistic_max_iter)
     
     svm_rbf = SVC(kernel=args.svm_kernel)
+    
+    xgb_classifier = xgb.XGBClassifier(max_depth=args.xgb_max_depth)
+
+    # Convert hidden_layer_sizes from string to tuple of integers
+    hidden_layer_sizes = ast.literal_eval(args.nn_hidden_layer_sizes)
+    
+    nn_classifier = MLPClassifier(hidden_layer_sizes=hidden_layer_sizes)
     
     # Create pipelines for classifiers with your encoder
     rfc_pipeline = Pipeline([
         ("Data Transformations", ct),
         ("Random Forest", rfc)
-    ])
-
-    gb_pipeline = Pipeline([
-        ("Data Transformations", ct),
-        ("Gradient Boosting", gb)
     ])
 
     logistic_pipeline = Pipeline([
@@ -107,14 +114,26 @@ def main():
         ("SVM with RBF kernel", svm_rbf)
     ])
     
+    xgb_pipeline = Pipeline([
+        ("Data Transformations", ct),
+        ("XGBoost Classifier", xgb_classifier)
+    ])
+    
+    nn_pipeline = Pipeline([
+        ("Data Transformations", ct),
+        ("Neural Network Classifier", nn_classifier)
+    ])
+    
     # Fit and evaluate each pipeline
-    for pipeline, name in [(rfc_pipeline, 'Random Forest'), (gb_pipeline, 'Gradient Boosting'), 
-                           (logistic_pipeline, 'Logistic Regression'), (svm_rbf_pipeline, 'SVM with RBF kernel')]:
+    for pipeline, name in [(rfc_pipeline, 'Random Forest'), 
+                           (logistic_pipeline, 'Logistic Regression'), 
+                           (svm_rbf_pipeline, 'SVM with RBF kernel'),
+                           (xgb_pipeline, 'XGBoost Classifier'),
+                           (nn_pipeline, 'Neural Network Classifier')]:
         pipeline.fit(X_train, y_train)
         train_accuracy = pipeline.score(X_train, y_train)
         test_accuracy = pipeline.score(X_test, y_test)
-        print(f"{name} Training Accuracy: {train_accuracy:.4f}")
-        print(f"{name} Test Accuracy: {test_accuracy:.4f}")
+        print(f"{name} Training Accuracy: {test_accuracy:.4f}")
         
         # Save the model
         model_save_path = os.path.join(args.model_dir, f"{name.lower().replace(' ', '_')}_model.joblib")
