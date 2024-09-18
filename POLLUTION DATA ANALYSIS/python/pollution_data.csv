@@ -1,0 +1,84 @@
+country,city,location,measurements_parameter,measurements_sourcename,measurements_unit,measurements_value,measurements_lastupdated,country_name_en,coordinates.lon,coordinates.lat
+TR,Denizli,Bayramyeri,PM10,Turkey,µg/m³,61.0,2017-07-20 21:00:00,Turkey,29.0970625522213,37.766395143213
+TW,桃園市,Pingzhen,PM10,Taiwan,µg/m³,43.0,2017-12-22 05:00:00,"Taiwan, China",121.203986,24.952786
+TW,桃園市,Pingzhen,NO2,Taiwan,ppm,0.014,2017-12-22 05:00:00,"Taiwan, China",121.203986,24.952786
+US,El Centro,Niland - English Roa,PM2.5,AirNow,µg/m³,11.0,2017-10-04 04:00:00,United States,-115.5444,33.2136
+US,Hartford-West Hartford-East Hartford,East Hartford,SO2,AirNow,ppm,0.0,2017-04-25 10:00:00,United States,-72.6297,41.7847
+US,FS1 - Forest Service,Unit1019,PM2.5,AirNow,µg/m³,3.0,2017-11-16 19:00:00,United States,-118.617132,36.13825
+US,Riverside-San Bernardino-Ontario,Riverside - Rubidoux,SO2,AirNow,ppm,0.0,2017-06-07 16:00:00,United States,-117.4258,34.0103
+US,SACRAMENTO,Natomas - Goldenland,PM10,AirNow,µg/m³,7.0,2017-06-01 17:00:00,United States,-121.50665,38.650716
+US,Phoenix-Mesa-Scottsdale,HIGLEY,PM10,AirNow,µg/m³,42.0,2017-04-28 12:00:00,United States,-111.7225,33.3107
+US,ABBEVILLE,Due West,O3,AirNow,ppm,0.041,2017-01-10 18:00:00,United States,-82.386101,34.325298
+RU,Unknown,Останкино 0,SO2,Mosecom,µg/m³,2.2,2017-09-11 08:00:00,Russian Federation,37.630405,55.82202
+RU,Unknown,Останкино 0,PM10,Mosecom,µg/m³,20.0,2017-09-11 08:00:00,Russian Federation,37.630405,55.82202
+FR,CALAIS,Calais Parmentier,CO,eea,µg/m³,12.5,2017-05-02 14:00:00,France,1.890080000372347,50.95779999990659
+IN,Unknown,"MD University, Rohtak - HSPCB",PM10,CPCB,µg/m³,72.92,2017-10-13 09:15:00,India,76.619464,28.876028
+DE,Hof,Hof/LfU,SO2,eea,µg/m³,3.48,2017-12-31 16:00:00,Germany,11.897492000385864,50.320610999840994
+AT,Amt der Niederösterreichischen Landesregierung,NET.03,SO2,EEA Austria,µg/m³,2.0,2017-07-20 19:00:00,Austria,15.903611111111111,48.33111111057804
+AT,Amt der Niederösterreichischen Landesregierung,Weiz Birkfelder Stra�e,PM10,EEA Austria,µg/m³,0.0,2017-07-20 19:00:00,Austria,15.628333,47.21722399946486
+CL,Quilicura,Quilicura,O3,Chile - SINCA,µg/m³,0.0,2017-06-28 15:00:00,Chile,-70.723792612552,-33.349626928347
+DE,Augsburg,Schleswig,O3,EEA Germany,µg/m³,24.6,2017-01-06 09:00:00,Germany,9.549379,54.5273
+AT,Amt der Niederösterreichischen Landesregierung,Liezen Alte Gasse 8,NO2,EEA Austria,µg/m³,0.0,2017-07-20 19:00:00,Austria,14.243611111111111,47.56722222168765
+AT,Amt der Niederösterreichischen Landesregierung,St. Veit a. d. Glan Hauptbahnhof,PM10,EEA Austria,µg/m³,0.0,2017-05-11 19:00:00,Austria,14.365833333333335,46.77111099946426
+CL,Rancagua,Rancagua I,O3,Chile - SINCA,µg/m³,0.0,2017-06-28 16:00:00,Chile,-70.713919225517,-34.162314609087
+CL,Talca,Universidad de Talca,SO2,Chile - SINCA,µg/m³,0.0,2017-06-28 15:00:00,Chile,-71.633396474869,-35.406582744695
+CL,Catemu,Loncura,NO2,Chile - SINCA,µg/m³,17.86,2017-03-18 11:00:00,Chile,-71.533019680176,-32.795151048047
+FR,MARCQ-EN-BARŒUL,Marcq CTM,NO2,eea,µg/m³,23.25,2017-07-18 20:00:00,France,3.076560000045331,50.6700299997373
+DE,Karlsruhe,Karlsruhe-Nordwest,SO2,eea,µg/m³,3.0,2017-01-06 09:00:00,Germany,8.355627999838132,49.02859400001384
+DE,Augsburg,Augsburg/LfU,SO2,eea,µg/m³,1.52,2017-09-28 12:00:00,Germany,10.90305099988239,48.32601300022512
+TR,Karabük,Kardemir 1,NO2,Turkey,µg/m³,42.0,2017-12-14 11:00:00,Turkey,32.657684,41.193515
+TR,Adana,Valilik,SO2,Turkey,µg/m³,3.0,2017-07-20 21:00:00,Turkey,35.3124388,36.999171
+TR,Adana,Çatalan,PM10,Turkey,µg/m³,34.0,2017-07-20 21:00:00,Turkey,35.2619539,37.1864029
+TR,Kahramanmaraş,Elbistan,PM10,Turkey,µg/m³,64.0,2017-07-20 21:00:00,Turkey,37.1983477297733,38.2038482508205
+US,GBU,GBUAPCD EBAM @ Alpin,PM2.5,AirNow,µg/m³,1.0,2017-11-16 19:00:00,United States,-119.807603,38.766299
+US,Reno-Sparks,Incline,O3,AirNow,ppm,0.025,2017-10-19 19:00:00,United States,-119.9564,39.2517
+US,MT1,Clearwater,PM2.5,AirNow,µg/m³,7.0,2017-10-05 13:00:00,United States,-113.384844,46.998809
+US,037,Mobile_Cle Elum,PM2.5,AirNow,µg/m³,0.0,2017-09-01 18:00:00,United States,-120.957842,47.197888
+US,Omaha-Council Bluffs,"Pisgah, Harrison Cou",O3,AirNow,ppm,0.007,2017-07-01 12:00:00,United States,-95.9431,41.668098
+US,SACRAMENTO,Natomas - Goldenland,O3,AirNow,ppm,0.022,2017-06-01 17:00:00,United States,-121.50665,38.650716
+US,LINCOLN,MOBILE-KICKAPOO,O3,AirNow,ppm,0.028,2017-01-04 17:00:00,United States,-97.090278,35.4884
+PE,Lima,PUENTE PIEDRA,NO2,Senamhi,ppm,0.0058,2017-07-20 06:00:00,Peru,-77.074133,-11.863253
+PE,Lima,SAN MARTIN DE PORRES,SO2,Senamhi,ppm,0.0018,2017-07-20 06:00:00,Peru,-77.084472,-12.008889
+PL,Unknown,Targówek,O3,Poland,µg/m³,5.9,2017-01-08 07:00:00,Poland,21.03916667,52.29085889
+PL,Unknown,IGFPAN,NO2,Poland,µg/m³,17.0,2017-01-08 07:00:00,Poland,20.788889,51.83518056
+PL,Unknown,Zegrzyńska,O3,Poland,µg/m³,21.4,2017-01-08 07:00:00,Poland,20.95555556,52.40757694
+RU,Unknown,Марьино,NO2,Mosecom,µg/m³,20.0,2017-09-11 08:00:00,Russian Federation,37.7460631,55.6532082
+RU,Unknown,Пролетарский проспект,NO2,Mosecom,µg/m³,34.4,2017-09-11 08:00:00,Russian Federation,37.6535471,55.6365687
+AT,Amt der Niederösterreichischen Landesregierung,Lenzing Winterstrasse,SO2,EEA Austria,µg/m³,1.22000002,2017-07-20 19:00:00,Austria,13.600833329999999,47.97194439946617
+AT,Amt der Niederösterreichischen Landesregierung,Liezen Alte Gasse 8,SO2,EEA Austria,µg/m³,0.0,2017-07-20 19:00:00,Austria,14.243611111111111,47.56722222168765
+AT,Amt der Niederösterreichischen Landesregierung,"Mannsw�rth bei Schwechat, Danubiastra�e/A4",PM10,EEA Austria,µg/m³,30.0,2017-07-20 19:00:00,Austria,16.511110000000002,48.14499999946652
+ES,Unknown,ES2036A,SO2,EEA Spain,µg/m³,5.0,2017-05-03 22:00:00,Spain,0.425,40.5461099994694
+FR,DENAIN,Denain Villars,SO2,eea,µg/m³,3.33,2017-07-18 20:00:00,France,3.395930000273074,50.32276000008711
+FR,CALAIS,Escautpont,PM10,EEA France,µg/m³,19.2,2017-07-18 18:00:00,France,3.551812869268811,50.420270857658636
+PL,Unknown,Tochtermana,NO2,Poland,µg/m³,45.1,2017-01-08 07:00:00,Poland,21.13916667,51.39909556
+RU,Unknown,Площадь Гагарина,SO2,Mosecom,µg/m³,4.8,2017-09-11 08:00:00,Russian Federation,37.5776631,55.7083636
+RU,Unknown,МГУ,SO2,Mosecom,µg/m³,3.3,2017-09-11 08:00:00,Russian Federation,37.5365711,55.7005288
+RU,Unknown,Кожухово,SO2,Mosecom,µg/m³,4.6,2017-09-11 08:00:00,Russian Federation,37.9038391,55.7240871
+RU,Unknown,Ак. Анохина,NO2,Mosecom,µg/m³,46.7,2017-09-11 05:00:00,Russian Federation,37.4716145,55.6586483
+US,Tahlequah,TAHLEQUAH,O3,AirNow,ppm,0.037,2017-12-06 21:00:00,United States,-94.986099,35.854198
+US,CA8 - ARB,Santa Rosa Fire Stat,PM2.5,AirNow,µg/m³,24.0,2017-12-04 04:00:00,United States,-122.671022,38.438319
+US,GBU,GBUAPCD EBAM @ Lee V,PM2.5,AirNow,µg/m³,5.0,2017-11-21 22:00:00,United States,-119.121044,37.956884
+US,GBU,GBUAPCD EBAM @ Alpin,PM2.5,AirNow,µg/m³,11.0,2017-11-18 02:00:00,United States,-119.807668,38.766246
+US,FS1 - Forest Service,Unit1019,PM2.5,AirNow,µg/m³,12.0,2017-11-17 21:00:00,United States,-118.617153,36.138389
+US,AROOSTOOK,Littleton,PM2.5,AirNow,µg/m³,5.7,2017-10-24 08:00:00,United States,-67.882566,46.228731
+TR,Sinop,Erfelek,O3,Turkey,µg/m³,10.0,2017-07-20 21:00:00,Turkey,34.992889,41.945667
+TR,Sinop,İnceburun,PM10,Turkey,µg/m³,9.0,2017-06-12 06:00:00,Turkey,34.946748,42.094952
+TW,桃園市,Pingzhen,PM2.5,Taiwan,µg/m³,9.0,2017-12-22 05:00:00,"Taiwan, China",121.203986,24.952786
+US,Rochester,Rochester,SO2,AirNow,ppm,0.001,2017-01-05 20:00:00,United States,-92.4497,43.9947
+DE,Kehl,Kehl,SO2,eea,µg/m³,2.0,2017-01-06 09:00:00,Germany,7.802316999571487,48.578177999862866
+CL,Catemu,Romeral,NO2,Chile - SINCA,µg/m³,0.0,2017-06-28 16:00:00,Chile,-71.006441,-32.823956
+CL,Catemu,Santa Margarita,O3,Chile - SINCA,µg/m³,0.0,2017-06-28 13:00:00,Chile,-70.938144,-32.776573
+CL,Chiguayante,Punteras,O3,Chile - SINCA,µg/m³,0.0,2017-06-28 16:00:00,Chile,-73.036132300941,-36.923329602986
+CL,Chillán,Puren,O3,Chile - SINCA,µg/m³,0.0,2017-06-28 16:00:00,Chile,-72.093040558483,-36.616167751711
+CL,Valparaíso,Valparaiso,SO2,Chile - SINCA,µg/m³,0.0,2017-06-28 15:00:00,Chile,-71.614167231712,-33.049743798096
+CL,Catemu,Progreso,PM2.5,Chile - SINCA,µg/m³,0.0,2017-06-28 15:00:00,Chile,-72.289451,-37.068142
+CL,Catemu,Quilpue,PM2.5,Chile - SINCA,µg/m³,0.0,2017-06-28 17:00:00,Chile,-71.434512871895,-33.047466597243
+BE,Antwerpen,BETR815,SO2,EEA Belgium,µg/m³,1.0,2017-03-06 10:00:00,Belgium,4.33220643231032,51.2146988167721
+BR,Unknown,Mogi das Cruzes,NO2,Sao Paulo,µg/m³,39.0,2017-10-27 18:00:00,Brazil,-46.18686057,-23.51817223
+BA,Unknown,Vijećnica,O3,Bosnia,µg/m³,19.0,2017-02-13 13:00:00,Bosnia and Herzegovina,18.435,43.859
+BE,Antwerpen,42M802 - ANTWERPEN,SO2,eea,µg/m³,3.5,2017-03-14 11:00:00,Belgium,4.424399006770883,51.26098970853363
+BE,Antwerpen,42N045 - HASSELT,NO2,EEA Belgium,µg/m³,49.5,2017-01-06 10:00:00,Belgium,5.368378532294259,50.93971186546469
+BR,Unknown,Ribeirão Preto-Centro,NO2,Sao Paulo,µg/m³,10.0,2017-10-27 18:00:00,Brazil,-47.81898767,-21.17706594
+BR,Unknown,Mogi das Cruzes,PM10,Sao Paulo,µg/m³,45.0,2017-10-27 18:00:00,Brazil,-46.18686057,-23.51817223
+TR,İzmir,İzmir - Alsancak İBB,NO2,Turkiye,µg/m³,27.0,2017-01-03 13:00:00,Turkey,27.144444,38.432222
+TR,İzmir,İzmir - Alsancak İBB,CO,Turkiye,µg/m³,0.0,2017-09-25 11:00:00,Turkey,27.144444,38.432222
